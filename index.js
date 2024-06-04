@@ -15,3 +15,25 @@ function myFunction() {
         navbar.classList.remove("sticky");
     }
 }
+
+//allow scroll the images on the hobbie sectio
+
+let scrollcontainer = document.queryselector(".gallery");
+let backBtn = document.getElementById("backBtn");
+let nextBtn = document.getElementById("nextBtn");
+
+scrollcontainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollcontainer.scrollleft += evt.deltaY;
+});
+
+nextBtn.addEventListener("click", () => {
+    scrollcontainer.style.scrollBehavior = "smooth";
+    scrollcontainer.scrollleft += 1200;
+
+})
+backBtn.addEventListener("click", () => {
+    scrollcontainer.style.scrollBehavior = "smooth";
+    scrollcontainer.scrollleft -= 1200;
+
+})

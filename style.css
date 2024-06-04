@@ -391,7 +391,7 @@ body {
 
 
 .gallery {
-    width: 900px;
+    width: 1200px;
     display: flex;
     overflow: scroll;
 
@@ -401,7 +401,7 @@ body {
 .gallery div {
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     grid-gap: 20px;
     padding: 10px;
     flex: none;
@@ -409,10 +409,35 @@ body {
 
 .gallery div img {
     width: 100%;
+    filter: grayscale(100%);
+    transform: transform 05s;
+}
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
 }
 
 /*
-.gallery::-webkit-scrollbar {
+#backBtn,
+#nextBtn {
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+
+}
+*/
+.gallery div img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+    transform: scale(1.1);
+
+
+}
+
+.gallery-wrap::-webkit-scrollbar {
     display: none;
 }
 
@@ -473,7 +498,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #c29059;
+    background-color: #5a4a40;
 }
 
 /* Contact Flip Cardr*/
